@@ -1,5 +1,5 @@
 import './Navbar.jsx'
-import './LogActivity.jsx'
+// import './LogActivity.jsx'
 import './App.css'
 import Navbar from "./Navbar.jsx";
 import Authorities from "./Authorities.jsx";
@@ -18,11 +18,11 @@ function App() {
         <div className="App">
 
             <Navbar/>
-            <Diseases/>
+            {/*<Diseases/>*/}
             {/*<LogActivity/>*/}
             {/*<Users/>*/}
             {/*<Reports/>*/}
-            <Authorities />
+            <Authorities/>
         </div>
 
     </>
