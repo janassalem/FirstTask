@@ -20,7 +20,7 @@ const LogActivity = () => {
     useEffect(() => {
         const fetchData = async () => {
             const data =
-            setActivityData(data);
+                setActivityData(data);
         };
 
         fetchData();
@@ -73,60 +73,60 @@ const LogActivity = () => {
 
             {/*<div className="LogActivity-body">*/}
 
-                <div className="scroll-wrapper">
+            <div className="scroll-wrapper">
 
 
-                        <div className="grid-table">
-                           <div className="table-content">
-                               <div className="grid-header">
-                                   <div className="grid-cell">
-                                       <input
-                                           type="checkbox"
-                                           className="checkbox"
-                                           onChange={handleSelectAll}
-                                           checked={filteredData.length > 0 && checkedRows.length === filteredData.length}
-                                       />
-                                   </div>
-                                   <div className="grid-cell">Name</div>
-                                   <div className="grid-cell">Activity</div>
-                                   <div className="grid-cell">Date</div>
-                                   <div className="grid-cell">Action</div>
-                               </div>
-
-                               {filteredData.length > 0 ? (
-                                   filteredData.map((entry, index) => (
-                                       <div className="grid-row" key={index}>
-                                           <div className="grid-cell">
-                                               <input
-                                                   type="checkbox"
-                                                   className="checkbox"
-                                                   checked={checkedRows.includes(index)}
-                                                   onChange={() => handleCheckboxChange(index)}
-                                               />
-                                           </div>
-                                           <div className="grid-cell name-cell">
-                                               <img src={entry.profilepicture} alt={entry.name} />
-                                               <span>{entry.name}</span>
-                                           </div>
-                                           <div className="grid-cell">{entry.activity}</div>
-                                           <div className="grid-cell">{entry.date}</div>
-                                           <div className="grid-cell">
-                                               <button className="info-btn">
-                                                   <BsThreeDotsVertical className="iconinfo" />
-                                               </button>
-                                           </div>
-                                       </div>
-                                   ))
-                               ) : (
-                                   <div className="grid-row empty-row">
-                                       <div style={{ gridColumn: '1 / -1', textAlign: 'center', padding: '1rem' }}>
-                                           No activity found.
-                                       </div>
-                                   </div>
-                               )}
-                           </div>
+                <div className="grid-table">
+                    <div className="table-content">
+                        <div className="grid-header">
+                            <div className="grid-cell">
+                                <input
+                                    type="checkbox"
+                                    className="checkbox"
+                                    onChange={handleSelectAll}
+                                    checked={filteredData.length > 0 && checkedRows.length === filteredData.length}
+                                />
+                            </div>
+                            <div className="grid-cell">Name</div>
+                            <div className="grid-cell">Activity</div>
+                            <div className="grid-cell">Date</div>
+                            <div className="grid-cell">Action</div>
                         </div>
+
+                        {filteredData.length > 0 ? (
+                            filteredData.map((entry, index) => (
+                                <div className="grid-row" key={index}>
+                                    <div className="grid-cell">
+                                        <input
+                                            type="checkbox"
+                                            className="checkbox"
+                                            checked={checkedRows.includes(index)}
+                                            onChange={() => handleCheckboxChange(index)}
+                                        />
+                                    </div>
+                                    <div className="grid-cell name-cell">
+                                        <img src={entry.profilepicture} alt={entry.name} />
+                                        <span>{entry.name}</span>
+                                    </div>
+                                    <div className="grid-cell">{entry.activity}</div>
+                                    <div className="grid-cell">{entry.date}</div>
+                                    <div className="grid-cell">
+                                        <button className="info-btn">
+                                            <BsThreeDotsVertical className="iconinfo" />
+                                        </button>
+                                    </div>
+                                </div>
+                            ))
+                        ) : (
+                            <div className="grid-row empty-row">
+                                <div style={{ gridColumn: '1 / -1', textAlign: 'center', padding: '1rem' }}>
+                                    No activity found.
+                                </div>
+                            </div>
+                        )}
+                    </div>
                 </div>
+            </div>
 
 
 

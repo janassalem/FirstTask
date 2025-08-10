@@ -14,6 +14,9 @@ const Diseases = () => {
             nuclear: "Enter Data",
             laboratoryTests: "Enter Data",
             xRay: "Enter Data",
+            X1: "Data X1",
+            employee: "John Doe",
+            date: "2025-08-10",
         },
         {
             name: "Disease Y",
@@ -24,6 +27,9 @@ const Diseases = () => {
             nuclear: "Enter Data",
             laboratoryTests: "Enter Data",
             xRay: "Enter Data",
+            X1: "Data X1",
+            employee: "Jane Smith",
+            date: "2025-08-11",
         },
         {
             name: "Disease Y",
@@ -34,6 +40,9 @@ const Diseases = () => {
             nuclear: "Enter Data",
             laboratoryTests: "Enter Data",
             xRay: "Enter Data",
+            X1: "Data X1",
+            employee: "Jane Smith",
+            date: "2025-08-11",
         },
         {
             name: "Disease Y",
@@ -44,6 +53,9 @@ const Diseases = () => {
             nuclear: "Enter Data",
             laboratoryTests: "Enter Data",
             xRay: "Enter Data",
+            X1: "Data X1",
+            employee: "Jane Smith",
+            date: "2025-08-11",
         },
         {
             name: "Disease Y",
@@ -54,7 +66,11 @@ const Diseases = () => {
             nuclear: "Enter Data",
             laboratoryTests: "Enter Data",
             xRay: "Enter Data",
-        }, {
+            X1: "Data X1",
+            employee: "Jane Smith",
+            date: "2025-08-11",
+        },
+        {
             name: "Disease Y",
             clinical: "Enter Data",
             ct: "Enter Data",
@@ -63,7 +79,11 @@ const Diseases = () => {
             nuclear: "Enter Data",
             laboratoryTests: "Enter Data",
             xRay: "Enter Data",
-        }, {
+            X1: "Data X1",
+            employee: "Jane Smith",
+            date: "2025-08-11",
+        },
+        {
             name: "Disease Y",
             clinical: "Enter Data",
             ct: "Enter Data",
@@ -72,8 +92,12 @@ const Diseases = () => {
             nuclear: "Enter Data",
             laboratoryTests: "Enter Data",
             xRay: "Enter Data",
+            X1: "Data X1",
+            employee: "Jane Smith",
+            date: "2025-08-11",
         },
     ]);
+
 
     const [searchTerm, setSearchTerm] = useState("");
     const [checkedRows, setCheckedRows] = useState([]);
@@ -126,12 +150,12 @@ const Diseases = () => {
             </div>
 
             {/* Table Scroll Wrapper */}
-            <div className="p-5 pb-2 overflow-x-scroll overflow-y-scroll whitespace-nowrap scrollbar-thin scrollbar-thumb-[#3A3574] scrollbar-track-[#D1D1D1]">
+            <div className="p-5 pb-2 overflow-x-auto overflow-y-auto whitespace-nowrap scrollbar-thin scrollbar-thumb-[#3A3575] scrollbar-track-[#D1D1D1] items-center">
                 {/* Table */}
-                <div className="flex flex-col border border-[#ddd] rounded-[20px] max-h-[400px]  overflow-auto bg-white shadow-[0_4px_8px_0_rgba(0,0,0,0.25)] min-w-[1400px] m-[30px]">
-                    <div className="min-w-[1400px]">
+                <div className=" ">
+                    <div className="min-w-[1400px] flex flex-col border border-[#ddd] rounded-[20px] max-h-[450px] overflow-auto bg-white shadow-[0_4px_8px_0_rgba(0,0,0,0.25)] m-[30px]">
                         {/* Table Header */}
-                        <div className="grid grid-cols-[40px_1.5fr_2fr_1fr_1fr_1fr_1fr_1fr_60px] items-center pp-[30px] border-b border-[#e2e2e2] bg-[#f5f5f5] font-normal text-[14px] text-[#333] sticky top-0">
+                        <div className="grid grid-cols-[60px_1.5fr_2fr_1fr_1fr_1fr_1fr_1fr_1fr_1fr_1fr_1fr_60px] items-center p-[30px] border-b border-[#e2e2e2] bg-[#f5f5f5] font-normal text-[14px] text-[#333] sticky top-0 overflow-auto">
                             <div>
                                 <input
                                     type="checkbox"
@@ -151,6 +175,9 @@ const Diseases = () => {
                             <div>Nuclear Medicine</div>
                             <div>Laboratory Tests</div>
                             <div>X-Ray</div>
+                            <div>X1</div>
+                            <div>Employee</div>
+                            <div>Date</div>
                             <div>Action</div>
                         </div>
 
@@ -159,7 +186,7 @@ const Diseases = () => {
                             filteredData.map((entry, index) => (
                                 <div
                                     key={index}
-                                    className="grid grid-cols-[40px_1.5fr_2fr_1fr_1fr_1fr_1fr_1fr_60px] items-center py-3 px-5 border-b border-[#f0f0f0] hover:bg-[#dddddd] transition-colors"
+                                    className="grid grid-cols-[40px_1.5fr_2fr_1fr_1fr_1fr_1fr_1fr_1fr_1fr_1fr_1fr_60px] items-center p-[20px] border-b border-[#f0f0f0] hover:bg-[#dddddd] transition-colors"
                                 >
                                     <div>
                                         <input
@@ -173,7 +200,7 @@ const Diseases = () => {
                                         <img
                                             src={PFP}
                                             alt={entry.name}
-                                            className="w-[32px] h-[32px] rounded-full object-cover border-2 border-[#1D194C]"
+                                            className="w-[32px] h-[32px] rounded-full object-cover border-0.5"
                                         />
                                         <span>{entry.name}</span>
                                     </div>
@@ -184,16 +211,19 @@ const Diseases = () => {
                                     <div>{entry.nuclear}</div>
                                     <div>{entry.laboratoryTests}</div>
                                     <div>{entry.xRay}</div>
+                                    <div>{entry.X1}</div>
+                                    <div>{entry.employee}</div>
+                                    <div>{entry.date}</div>
                                     <div>
-                                        <button className="w-[20px] h-[20px] bg-[#3A3574] rounded-full border-none flex justify-center items-center cursor-pointer p-0">
-                                            <BsThreeDotsVertical className="fill-white text-[16px]" />
+                                        <button className="w-[20px] h-[20px] bg-[#3A3574] rounded-full border-none flex justify-center items-center cursor-pointer p-0 fill-white">
+                                            <BsThreeDotsVertical className="text-white" />
                                         </button>
                                     </div>
                                 </div>
                             ))
                         ) : (
                             <div className="grid grid-cols-9 justify-center bg-[#fafafa] text-[14px] text-[#999]">
-                                <div className="col-span-9 text-center p-4">No data found.</div>
+                                <div className="col-span-9 text-center p-[9px]">No data found.</div>
                             </div>
                         )}
                     </div>

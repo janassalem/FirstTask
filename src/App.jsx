@@ -2,7 +2,9 @@ import './Navbar.jsx'
 import './LogActivity.jsx'
 import './App.css'
 import Navbar from "./Navbar.jsx";
-import LogActivity from "./LogActivity.jsx";
+import Diseases from "./Diseases.jsx";
+// import LogActivity from "./LogActivity.jsx";
+
 
 function App() {
 
@@ -12,7 +14,8 @@ function App() {
         <div className="App">
 
             <Navbar/>
-            <LogActivity/>
+            {/*<LogActivity/>*/}
+            <Diseases/>
         </div>
 
     </>
