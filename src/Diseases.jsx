@@ -189,7 +189,7 @@ const Diseases = () => {
                                         <div>
                                             <input
                                                 type="checkbox"
-                                                className="appearance-none w-[13px] h-[13px] border border-[#1D194C] rounded-[4px] bg-white cursor-pointer checked:bg-[#1D194C]"
+                                                className="appearance-none w-[13px] h-[13px] border border-[#1D194C] rounded-[4px] bg-white cursor-pointer checked:bg-[#1D194C] ml-[15px]"
                                                 checked={checkedRows.includes(index)}
                                                 onChange={() => handleCheckboxChange(index)}
                                             />
@@ -214,7 +214,7 @@ const Diseases = () => {
                                         <div>{entry.date}</div>
                                         <div>
                                             <button className="w-[20px] h-[20px] bg-[#3A3574] rounded-full border-none flex justify-center items-center cursor-pointer p-0 fill-white">
-                                                <BsThreeDotsVertical className="text-white" />
+                                                <BsThreeDotsVertical className="text-white" color="white" />
                                             </button>
                                         </div>
                                     </div>

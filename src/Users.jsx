@@ -1,60 +1,142 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { CiSearch, CiExport } from "react-icons/ci";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import PFP from "./assets/PFP.png";
 
-const Reports = () => {
-    const reportData = [
+const Users = () => {
+    const [userData, setUserData] = useState([
         {
-            name: "Report One",
-            patientName: "Bahr Adam",
-            serialNumber: "1542154511",
-            compatibilityRate: "90%",
-            geneticVariant: "Gerix",
+            name: "Bahr Adam",
+            username: "b7r",
+            phone: "9665525452",
+            email: "b7ri@gmail.com",
+            password: "**********",
+            authority: "Manager",
+            clientId: "253294833",
+            gender: "Male",
+            age: "25 Year",
             date: "01/02/2025",
         },
         {
-            name: "Report 0212",
-            patientName: "Bahr Adam",
-            serialNumber: "1542154511",
-            compatibilityRate: "90%",
-            geneticVariant: "Gerix",
+            name: "Bahr Adam",
+            username: "b7r",
+            phone: "9665525452",
+            email: "b7ri@gmail.com",
+            password: "**********",
+            authority: "Manager",
+            clientId: "253294833",
+            gender: "Male",
+            age: "25 Year",
             date: "01/02/2025",
         },
         {
-            name: "Report 0212",
-            patientName: "Bahr Adam",
-            serialNumber: "1542154511",
-            compatibilityRate: "90%",
-            geneticVariant: "Gerix",
+            name: "Bahr Adam",
+            username: "b7r",
+            phone: "9665525452",
+            email: "b7ri@gmail.com",
+            password: "**********",
+            authority: "Manager",
+            clientId: "253294833",
+            gender: "Male",
+            age: "25 Year",
             date: "01/02/2025",
         },
         {
-            name: "Report 0212",
-            patientName: "Bahr Adam",
-            serialNumber: "1542154511",
-            compatibilityRate: "90%",
-            geneticVariant: "Gerix",
+            name: "Bahr Adam",
+            username: "b7r",
+            phone: "9665525452",
+            email: "b7ri@gmail.com",
+            password: "**********",
+            authority: "Manager",
+            clientId: "253294833",
+            gender: "Male",
+            age: "25 Year",
             date: "01/02/2025",
         },
         {
-            name: "Report 0212",
-            patientName: "Bahr Adam",
-            serialNumber: "1542154511",
-            compatibilityRate: "90%",
-            geneticVariant: "Gerix",
+            name: "Bahr Adam",
+            username: "b7r",
+            phone: "9665525452",
+            email: "b7ri@gmail.com",
+            password: "**********",
+            authority: "Manager",
+            clientId: "253294833",
+            gender: "Male",
+            age: "25 Year",
             date: "01/02/2025",
         },
-
-    ];
+        {
+            name: "Bahr Adam",
+            username: "b7r",
+            phone: "9665525452",
+            email: "b7ri@gmail.com",
+            password: "**********",
+            authority: "Manager",
+            clientId: "253294833",
+            gender: "Male",
+            age: "25 Year",
+            date: "01/02/2025",
+        },
+        {
+            name: "Bahr Adam",
+            username: "b7r",
+            phone: "9665525452",
+            email: "b7ri@gmail.com",
+            password: "**********",
+            authority: "Manager",
+            clientId: "253294833",
+            gender: "Male",
+            age: "25 Year",
+            date: "01/02/2025",
+        },
+        {
+            name: "Bahr Adam",
+            username: "b7r",
+            phone: "9665525452",
+            email: "b7ri@gmail.com",
+            password: "**********",
+            authority: "Manager",
+            clientId: "253294833",
+            gender: "Male",
+            age: "25 Year",
+            date: "01/02/2025",
+        },
+        {
+            name: "Bahr Adam",
+            username: "b7r",
+            phone: "9665525452",
+            email: "b7ri@gmail.com",
+            password: "**********",
+            authority: "Manager",
+            clientId: "253294833",
+            gender: "Male",
+            age: "25 Year",
+            date: "01/02/2025",
+        },
+        {
+            name: "Bahr Adam",
+            username: "b7r",
+            phone: "9665525452",
+            email: "b7ri@gmail.com",
+            password: "**********",
+            authority: "Manager",
+            clientId: "253294833",
+            gender: "Male",
+            age: "25 Year",
+            date: "01/02/2025",
+        },
+    ]);
 
     const [searchTerm, setSearchTerm] = useState("");
     const [checkedRows, setCheckedRows] = useState([]);
 
-    const filteredData = reportData.filter(
-        (entry) =>
-            entry.patientName.toLowerCase().includes(searchTerm.toLowerCase()) ||
-            entry.serialNumber.toLowerCase().includes(searchTerm.toLowerCase())
+    useEffect(() => {
+        setUserData(userData);
+    }, []);
+
+    const filteredData = userData.filter((entry) =>
+        entry.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        entry.clientId.toLowerCase().includes(searchTerm.toLowerCase())
     );
 
     const handleCheckboxChange = (index) => {
@@ -94,16 +176,19 @@ const Reports = () => {
                     Export
                     <CiExport className="text-[#1D194C]" />
                 </button>
+
+                {/* Add Button */}
+                <button className="bg-[#F8F8F8] text-[#1D194C] shadow-[0_1px_2px_0_rgba(0,0,0,0.25)] border-none px-4 py-2 rounded-[90px] cursor-pointer ml-3 w-[90px] h-[40px] text-[#707070] flex items-center justify-center gap-1">
+                    Add
+                </button>
             </div>
 
             {/* Table Container */}
             <div className="p-5 pb-2 w-[1000px] mx-auto rounded-lg">
-                {/* Scroll Wrapper */}
-                <div className="overflow-auto max-h-[500px] rounded-[20px]">
-                    {/* Table Wrapper */}
+                <div className="overflow-auto max-h-[500px] rounded-[20px] scrollbar-thin scrollbar-thumb-[#1D194C] scrollbar-track-[#1D194C]">
                     <div className="min-w-[1400px] rounded-[20px] overflow-hidden bg-white">
                         {/* Table Header */}
-                        <div className="grid grid-cols-[60px_1.5fr_2fr_1.5fr_1fr_1fr_1fr_60px] items-center p-[30px] border-b border-[#e2e2e2] bg-[#f5f5f5] font-normal text-[14px] text-[#333] sticky top-0 z-10 rounded-t-[20px]">
+                        <div className="grid grid-cols-[60px_1.5fr_1.6fr_1.5fr_1.5fr_1.5fr_1fr_1fr_1fr_1fr_1fr_60px] items-center p-[30px] border-b border-[#e2e2e2] bg-[#f5f5f5] font-normal text-[14px] text-[#333] sticky top-0 z-10 rounded-t-[20px]">
                             <div>
                                 <input
                                     type="checkbox"
@@ -116,10 +201,14 @@ const Reports = () => {
                                 />
                             </div>
                             <div>Name</div>
-                            <div>Patient Name</div>
-                            <div>Serial Number</div>
-                            <div>Compatibility Rate</div>
-                            <div>Genetic Variant</div>
+                            <div>Username</div>
+                            <div>Phone</div>
+                            <div>Email</div>
+                            <div>Password</div>
+                            <div>Authority</div>
+                            <div>Client ID</div>
+                            <div>Gender</div>
+                            <div>Age</div>
                             <div>Date</div>
                             <div>Action</div>
                         </div>
@@ -130,12 +219,12 @@ const Reports = () => {
                                 filteredData.map((entry, index) => (
                                     <div
                                         key={index}
-                                        className="grid grid-cols-[60px_1.5fr_2fr_1.5fr_1fr_1fr_1fr_60px] items-center p-[20px] border-b border-[#f0f0f0] hover:bg-[#dddddd] transition-colors"
+                                        className="grid grid-cols-[60px_1.8fr_1fr_1.5fr_1.5fr_1.5fr_1fr_1fr_1fr_1fr_1fr_60px] items-center p-[20px] border-b border-[#f0f0f0] hover:bg-[#dddddd] transition-colors"
                                     >
                                         <div>
                                             <input
                                                 type="checkbox"
-                                                className="appearance-none w-[13px] h-[13px] border border-[#1D194C] rounded-[4px] bg-white cursor-pointer checked:bg-[#1D194C] ml-[15px]"
+                                                className="appearance-none w-[13px] h-[13px] border border-[#1D194C] rounded-[4px]  bg-white cursor-pointer checked:bg-[#1D194C] ml-[15px]"
                                                 checked={checkedRows.includes(index)}
                                                 onChange={() => handleCheckboxChange(index)}
                                             />
@@ -148,10 +237,14 @@ const Reports = () => {
                                             />
                                             <span>{entry.name}</span>
                                         </div>
-                                        <div>{entry.patientName}</div>
-                                        <div>{entry.serialNumber}</div>
-                                        <div>{entry.compatibilityRate}</div>
-                                        <div>{entry.geneticVariant}</div>
+                                        <div>{entry.username}</div>
+                                        <div>{entry.phone}</div>
+                                        <div>{entry.email}</div>
+                                        <div>{entry.password}</div>
+                                        <div>{entry.authority}</div>
+                                        <div>{entry.clientId}</div>
+                                        <div>{entry.gender}</div>
+                                        <div>{entry.age}</div>
                                         <div>{entry.date}</div>
                                         <div>
                                             <button className="w-[20px] h-[20px] bg-[#3A3574] rounded-full border-none flex justify-center items-center cursor-pointer p-0 fill-white">
@@ -173,4 +266,4 @@ const Reports = () => {
     );
 };
 
-export default Reports;
+export default Users;

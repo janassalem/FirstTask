@@ -4,10 +4,10 @@ import './App.css'
 import Navbar from "./Navbar.jsx";
 import Authorities from "./Authorities.jsx";
 import Diseases from "./Diseases.jsx";
-// import Users from "./Users.jsx";
-//
-// import LogActivity from "./LogActivity.jsx";
-// import Reports from "./Reports.jsx";
+import Users from "./Users.jsx";
+
+import LogActivity from "./LogActivity.jsx";
+import Reports from "./Reports.jsx";
 
 
 function App() {
@@ -20,9 +20,9 @@ function App() {
             <Navbar/>
             {/*<Diseases/>*/}
             {/*<LogActivity/>*/}
-            {/*<Users/>*/}
+            <Users/>
             {/*<Reports/>*/}
-            <Authorities/>
+            {/*<Authorities/>*/}
         </div>
 
     </>
