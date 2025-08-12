@@ -97,13 +97,13 @@ const Reports = () => {
             </div>
 
             {/* Table Container */}
-            <div className="p-5 pb-2 w-[1000px] mx-auto rounded-lg">
+            <div className="p-5 pb-2 w-full max-w-[1200px] mx-auto rounded-lg">
                 {/* Scroll Wrapper */}
-                <div className="overflow-auto max-h-[500px] rounded-[20px]">
+                <div className="overflow-x-auto md:overflow-auto max-h-[500px] rounded-[20px] scrollbar-thin scrollbar-thumb-[#1D194C] scrollbar-track-[#1D194C] shadow-[0_4px_8px_0_rgba(0,0,0,0.25)]">
                     {/* Table Wrapper */}
-                    <div className="min-w-[1400px] rounded-[20px] overflow-hidden bg-white">
+                    <div className="min-w-[1400px] md:min-w-[1400px] rounded-[20px] overflow-hidden bg-white">
                         {/* Table Header */}
-                        <div className="grid grid-cols-[60px_1.5fr_2fr_1.5fr_1fr_1fr_1fr_60px] items-center p-[30px] border-b border-[#e2e2e2] bg-[#f5f5f5] font-normal text-[14px] text-[#333] sticky top-0 z-10 rounded-t-[20px]">
+                        <div className="sticky top-0 z-10 grid grid-cols-[60px_1.5fr_2fr_1.5fr_1fr_1fr_1fr_60px] items-center p-[30px] md:p-[30px] border-b border-[#e2e2e2] bg-[#f5f5f5] font-normal text-[14px] text-[#333] rounded-t-[20px]">
                             <div>
                                 <input
                                     type="checkbox"
@@ -130,21 +130,21 @@ const Reports = () => {
                                 filteredData.map((entry, index) => (
                                     <div
                                         key={index}
-                                        className="grid grid-cols-[60px_1.5fr_2fr_1.5fr_1fr_1fr_1fr_60px] items-center p-[20px] border-b border-[#f0f0f0] hover:bg-[#dddddd] transition-colors"
+                                        className="grid grid-cols-[60px_1.5fr_2fr_1.5fr_1fr_1fr_1fr_60px] items-center p-[20px] md:p-[20px] border-b border-[#f0f0f0] hover:bg-[#dddddd] transition-colors md:text-sm"
                                     >
                                         <div>
                                             <input
                                                 type="checkbox"
-                                                className="appearance-none w-[13px] h-[13px] border border-[#1D194C] rounded-[4px] bg-white cursor-pointer checked:bg-[#1D194C] ml-[15px]"
+                                                className="appearance-none w-[13px] h-[13px] border border-[#1D194C] rounded-[4px] bg-white cursor-pointer checked:bg-[#1D194C] ml-[15px] md:ml-[15px]"
                                                 checked={checkedRows.includes(index)}
                                                 onChange={() => handleCheckboxChange(index)}
                                             />
                                         </div>
-                                        <div className="flex items-center gap-[10px] text-[#1D194C]">
+                                        <div className="flex items-center gap-[10px] md:gap-[10px] text-[#1D194C]">
                                             <img
                                                 src={PFP}
                                                 alt={entry.name}
-                                                className="w-[32px] h-[32px] rounded-full object-cover border-0.5"
+                                                className="w-[32px] h-[32px] md:w-[32px] md:h-[32px] rounded-full object-cover border-0.5"
                                             />
                                             <span>{entry.name}</span>
                                         </div>
@@ -169,6 +169,7 @@ const Reports = () => {
                     </div>
                 </div>
             </div>
+
         </div>
     );
 };

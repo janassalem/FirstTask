@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { CiSearch, CiExport } from "react-icons/ci";
 import { BsThreeDotsVertical } from "react-icons/bs";
+import { IoPersonAddOutline } from "react-icons/io5";
 import PFP from "./assets/PFP.png";
 
 const Users = () => {
@@ -156,11 +157,11 @@ const Users = () => {
     };
 
     return (
-        <div className="shadow-[0_4px_8px_0_rgba(0,0,0,0.25)] p-[8px]">
+        <div className=" p-[8px]">
             {/* Header */}
-            <div className="flex flex-row items-center justify-end gap-[7px] p-5 mb-[10px]">
+            <div className="flex flex-row  items-center justify-end gap-[7px] p-5 mb-[10px] sm:flex-row items-center sm:items-center">
                 {/* Search Bar */}
-                <div className="bg-[#F8F8F8] text-[#1D194C] shadow-[0_1px_2px_0_rgba(0,0,0,0.25)] rounded-[90px] p-[10px] flex flex-row items-center w-[250px] h-[20px]">
+                <div className="bg-[#F8F8F8] text-[#1D194C] shadow-[0_1px_2px_0_rgba(0,0,0,0.25)] rounded-[90px] p-[10px] flex flex-row items-center w-[250px] h-[20px] sm:w-[250px] ">
                     <CiSearch className="text-[#1D194C]" />
                     <input
                         type="text"
@@ -172,23 +173,24 @@ const Users = () => {
                 </div>
 
                 {/* Export Button */}
-                <button className="bg-[#F8F8F8] text-[#1D194C] shadow-[0_1px_2px_0_rgba(0,0,0,0.25)] border-none px-4 py-2 rounded-[90px] cursor-pointer ml-3 w-[90px] h-[40px] text-[#707070] flex items-center justify-center gap-1">
+                <button className="bg-[#F8F8F8] text-[#1D194C] shadow-[0_1px_2px_0_rgba(0,0,0,0.25)] border-none px-4 py-2 rounded-[90px] cursor-pointer ml-3 w-[90px] h-[40px] text-[#707070] flex items-center justify-center gap-1 sm:w-[90px] h-[40px] text-[#707070] flex items-center justify-center gap-1">
                     Export
                     <CiExport className="text-[#1D194C]" />
                 </button>
 
                 {/* Add Button */}
-                <button className="bg-[#F8F8F8] text-[#1D194C] shadow-[0_1px_2px_0_rgba(0,0,0,0.25)] border-none px-4 py-2 rounded-[90px] cursor-pointer ml-3 w-[90px] h-[40px] text-[#707070] flex items-center justify-center gap-1">
+                <button className="bg-[#F8F8F8] text-[#1D194C] shadow-[0_1px_2px_0_rgba(0,0,0,0.25)] border-none px-4 py-2 rounded-[90px] cursor-pointer ml-3 w-[90px] sm:w-[90px] h-[40px] text-[#707070] flex items-center justify-center gap-1">
                     Add
+                    <IoPersonAddOutline className="text-[#1D194C]" />
                 </button>
             </div>
 
             {/* Table Container */}
-            <div className="p-5 pb-2 w-[1000px] mx-auto rounded-lg">
-                <div className="overflow-auto max-h-[500px] rounded-[20px] scrollbar-thin scrollbar-thumb-[#1D194C] scrollbar-track-[#1D194C]">
-                    <div className="min-w-[1400px] rounded-[20px] overflow-hidden bg-white">
+            <div className="p-5 pb-2 w-full max-w-[1200px] mx-auto rounded-lg">
+                <div className="overflow-x-auto md:overflow-auto max-h-[500px] rounded-[20px] scrollbar-thin scrollbar-thumb-[#1D194C] scrollbar-track-[#1D194C] shadow-[0_4px_8px_0_rgba(0,0,0,0.25)]">
+                    <div className="min-w-[1400px] md:min-w-[1400px] rounded-[20px] overflow-hidden bg-white">
                         {/* Table Header */}
-                        <div className="grid grid-cols-[60px_1.5fr_1.6fr_1.5fr_1.5fr_1.5fr_1fr_1fr_1fr_1fr_1fr_60px] items-center p-[30px] border-b border-[#e2e2e2] bg-[#f5f5f5] font-normal text-[14px] text-[#333] sticky top-0 z-10 rounded-t-[20px]">
+                        <div className=" sticky top-0 z-10 grid grid-cols-[60px_1.5fr_1.6fr_1.5fr_1.5fr_1.5fr_1fr_1fr_1fr_1fr_1fr_60px] items-center p-[30px] md:p-[30px] border-b border-[#e2e2e2] bg-[#f5f5f5] font-normal text-[14px] text-[#333]  rounded-t-[20px]">
                             <div>
                                 <input
                                     type="checkbox"
@@ -219,21 +221,21 @@ const Users = () => {
                                 filteredData.map((entry, index) => (
                                     <div
                                         key={index}
-                                        className="grid grid-cols-[60px_1.8fr_1fr_1.5fr_1.5fr_1.5fr_1fr_1fr_1fr_1fr_1fr_60px] items-center p-[20px] border-b border-[#f0f0f0] hover:bg-[#dddddd] transition-colors"
+                                        className="grid grid-cols-[60px_1.8fr_1fr_1.5fr_1.5fr_1.5fr_1fr_1fr_1fr_1fr_1fr_60px] items-center p-[20px] md:p-[20px] border-b border-[#f0f0f0] hover:bg-[#dddddd] transition-colors md:text-sm"
                                     >
                                         <div>
                                             <input
                                                 type="checkbox"
-                                                className="appearance-none w-[13px] h-[13px] border border-[#1D194C] rounded-[4px]  bg-white cursor-pointer checked:bg-[#1D194C] ml-[15px]"
+                                                className="appearance-none w-[13px] h-[13px] border border-[#1D194C] rounded-[4px] bg-white cursor-pointer checked:bg-[#1D194C] ml-[15px] md:ml-[15px]"
                                                 checked={checkedRows.includes(index)}
                                                 onChange={() => handleCheckboxChange(index)}
                                             />
                                         </div>
-                                        <div className="flex items-center gap-[10px] text-[#1D194C]">
+                                        <div className="flex items-center gap-[10px] md:gap-[10px] text-[#1D194C]">
                                             <img
                                                 src={PFP}
                                                 alt={entry.name}
-                                                className="w-[32px] h-[32px] rounded-full object-cover border-0.5"
+                                                className="w-[32px] h-[32px] md:w-[32px] md:h-[32px] rounded-full object-cover border-0.5"
                                             />
                                             <span>{entry.name}</span>
                                         </div>
@@ -262,6 +264,7 @@ const Users = () => {
                     </div>
                 </div>
             </div>
+
         </div>
     );
 };
