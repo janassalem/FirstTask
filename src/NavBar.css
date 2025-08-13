@@ -138,3 +138,14 @@
         margin: auto;
     }
 }
+
+
+
+.list-inline li .active {
+    color: #1D194C;
+    font-weight: bold;
+    text-decoration:  none;
+}
+.list-inline a {
+    text-decoration: none;
+}

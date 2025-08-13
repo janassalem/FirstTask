@@ -159,7 +159,7 @@ const Users = () => {
     return (
         <div className=" p-[8px]">
             {/* Header */}
-            <div className="flex flex-row  items-center justify-end gap-[7px] p-5 mb-[10px] sm:flex-row items-center sm:items-center">
+            <div className="flex flex-row  items-center justify-end gap-[7px] p-5 mb-[10px] mx-[55px] sm:flex-row items-center sm:items-center">
                 {/* Search Bar */}
                 <div className="bg-[#F8F8F8] text-[#1D194C] shadow-[0_1px_2px_0_rgba(0,0,0,0.25)] rounded-[90px] p-[10px] flex flex-row items-center w-[250px] h-[20px] sm:w-[250px] ">
                     <CiSearch className="text-[#1D194C]" />
@@ -186,8 +186,8 @@ const Users = () => {
             </div>
 
             {/* Table Container */}
-            <div className="p-5 pb-2 w-full max-w-[1200px] mx-auto rounded-lg">
-                <div className="overflow-x-auto md:overflow-auto max-h-[500px] rounded-[20px] scrollbar-thin scrollbar-thumb-[#1D194C] scrollbar-track-[#1D194C] shadow-[0_4px_8px_0_rgba(0,0,0,0.25)]">
+            <div className="p-5 pb-2 w-full max-w-[1400px] mx-auto rounded-lg">
+                <div className="overflow-x-auto md:overflow-auto  rounded-[20px] scrollbar-thin scrollbar-thumb-[#1D194C] scrollbar-track-[#1D194C] shadow-[0_4px_8px_0_rgba(0,0,0,0.25)]">
                     <div className="min-w-[1400px] md:min-w-[1400px] rounded-[20px] overflow-hidden bg-white">
                         {/* Table Header */}
                         <div className=" sticky top-0 z-10 grid grid-cols-[60px_1.5fr_1.6fr_1.5fr_1.5fr_1.5fr_1fr_1fr_1fr_1fr_1fr_60px] items-center p-[30px] md:p-[30px] border-b border-[#e2e2e2] bg-[#f5f5f5] font-normal text-[14px] text-[#333]  rounded-t-[20px]">

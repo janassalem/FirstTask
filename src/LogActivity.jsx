@@ -13,6 +13,10 @@ const LogActivity = () => {
         { name: "Salim Khan", activity: "Updated database", date: "2025-08-05", profilepicture: PFP  },
         { name: "Bahr Adam", activity: "Deleted a report", date: "2025-08-06", profilepicture: PFP},
         { name: "Salim Khan", activity: "Updated database", date: "2025-08-05", profilepicture: PFP  },
+        { name: "Salim Khan", activity: "Updated database", date: "2025-08-05", profilepicture: PFP  },
+        { name: "Salim Khan", activity: "Updated database", date: "2025-08-05", profilepicture: PFP  },
+        { name: "Salim Khan", activity: "Updated database", date: "2025-08-05", profilepicture: PFP  },
+        { name: "Salim Khan", activity: "Updated database", date: "2025-08-05", profilepicture: PFP  },
     ])
     const [searchTerm, setSearchTerm] = useState('');
     const [checkedRows, setCheckedRows] = useState([]);

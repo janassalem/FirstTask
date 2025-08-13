@@ -123,9 +123,9 @@ const Diseases = () => {
     };
 
     return (
-        <div className="shadow-[0_4px_8px_0_rgba(0,0,0,0.25)] p-[8px]">
+        <div className="p-[8px]">
             {/* Header */}
-            <div className="flex flex-row items-center justify-end gap-[7px] p-5 mb-[10px]">
+            <div className="flex flex-row items-center justify-end gap-[7px] p-5 mb-[10px] mx-[55px]">
                 {/* Search Bar */}
                 <div className="bg-[#F8F8F8] text-[#1D194C] shadow-[0_1px_2px_0_rgba(0,0,0,0.25)] rounded-[90px] p-[10px] flex flex-row items-center w-[250px] h-[20px]">
                     <CiSearch className="text-[#1D194C]" />
@@ -146,9 +146,9 @@ const Diseases = () => {
             </div>
 
             {/* Table Container - fixed width in order to horizontal scroll */}
-            <div className="p-5 pb-2 w-full max-w-[1200px] mx-auto rounded-lg">
+            <div className="p-2 pb-2 w-full max-w-[1400px] mx-auto rounded-lg ">
                 {/* Horizontal and vertical scroll wrapper */}
-                <div className="overflow-x-auto md:overflow-auto max-h-[500px] rounded-[20px] scrollbar-thin scrollbar-thumb-[#1D194C] scrollbar-track-[#1D194C] shadow-[0_4px_8px_0_rgba(0,0,0,0.25)]">
+                <div className="overflow-x-auto rounded-[20px] scrollbar-thin scrollbar-thumb-[#1D194C] scrollbar-track-[#1D194C] shadow-[0_4px_8px_0_rgba(0,0,0,0.25)] ">
                     {/* Table Wrapper - min width bigger than container with rounded corners & overflow hidden */}
                     <div className="min-w-[1400px] md:min-w-[1400px] rounded-[20px] overflow-hidden bg-white">
                         {/* Table Header  */}
