@@ -7,6 +7,7 @@ import Users from "./Users.jsx";
 import LogActivity from "./LogActivity.jsx";
 import Reports from "./Reports.jsx";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Overview from "./Overview.jsx";
 
 
 function App() {
@@ -20,7 +21,7 @@ function App() {
                     <Route path="/users" element={<Users />} />
                     <Route path="/log-activity" element={<LogActivity />} />
                     <Route path="/reports" element={<Reports />} />
-                    <Route path="/overview" element={<overview />} />
+                    <Route path="/overview" element={<Overview/>} />
                 </Routes>
             </div>
         </Router>
