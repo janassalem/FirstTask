@@ -56,6 +56,7 @@ const Overview = () => {
                     }
                 }
             }
+
         },
         colors: [color, '#E5E7EB'],
         legend: { show: false }
