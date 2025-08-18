@@ -5,7 +5,7 @@ import { ChevronUp, ChevronDown, User, Monitor, Microscope, BriefcaseMedical } f
 const Overview = () => {
     const monthlyReportOptions = {
         chart: { type: 'line', toolbar: { show: false }, zoom: { enabled: false } },
-        colors: ['#4F46E5', '#6366F1'],
+        colors: ['#4F46E5', '#9CACFF'],
         dataLabels: { enabled: false },
         stroke: { curve: 'smooth', width: 3 },
         grid: { show: false },
@@ -101,21 +101,34 @@ const Overview = () => {
 
                     {/* Right: Donuts + Visitors */}
                     <div className="grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-2 gap-6">
-                        {/* Donut 1 */}
-                        <div className="bg-white p-6 rounded-2xl shadow-lg flex flex-col items-center">
-                            <div className="w-40 h-40">
-                                <Chart options={donutOptions('68%', '#4F46E5')} series={[68, 32]} type="donut" width="100%" />
-                            </div>
-                            <p className="text-sm text-gray-500 mt-4">Hit rate for AI this year</p>
-                        </div>
+                        {/* Donuts div */}
+                       <div className="flex flex-col mb-4">
+                           {/* Donut 1 */}
+                           <div className="bg-white p-6 rounded-2xl shadow-lg flex flex-row items-center w-120">
+                               <div className="w-40 h-40">
+                                   <img src="./assets/Shape.png" alt="SVG" />
+                                   <Chart options={donutOptions('', '#4F46E5')} series={[68, 32]} type="donut" width="100%" />
+                               </div>
+                               <div>
+                                   <h1 className="text-4xl">68%</h1>
+                                   <p className="text-sm text-gray-500 mt-4">Hit rate for AI this year</p>
+                               </div>
 
-                        {/* Donut 2 */}
-                        <div className="bg-white p-6 rounded-2xl shadow-lg flex flex-col items-center">
-                            <div className="w-40 h-40">
-                                <Chart options={donutOptions('76%', '#6366F1')} series={[76, 24]} type="donut" width="100%" />
-                            </div>
-                            <p className="text-sm text-gray-500 mt-4">Successfully generated reports</p>
-                        </div>
+                           </div>
+
+                           {/* Donut 2 */}
+                           <div className="bg-white p-6 rounded-2xl shadow-lg flex flex-row items-center w-120 mt-4">
+                               <div className="w-40 h-40">
+                                   <Chart options={donutOptions('', '#6366F1')} series={[76, 24]} type="donut" width="100%" />
+                               </div>
+
+                               <div>
+                                   <h1 className="text-4xl">76%</h1>
+                                   <p className="text-sm text-gray-500 mt-4">Successfully generated reports</p>
+                               </div>
+
+                           </div>
+                       </div>
 
                         {/* Visitors Card */}
                         <div className="bg-white p-6 rounded-2xl shadow-lg lg:col-span-2">

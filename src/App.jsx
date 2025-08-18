@@ -22,6 +22,7 @@ function App() {
                     <Route path="/log-activity" element={<LogActivity />} />
                     <Route path="/reports" element={<Reports />} />
                     <Route path="/overview" element={<Overview/>} />
+                    <Route path="/" element={<Overview/>} />
                 </Routes>
             </div>
         </Router>

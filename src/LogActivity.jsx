@@ -48,23 +48,23 @@ const LogActivity = () => {
     return (
         <div className="p-[8px]">
             {/* Header */}
-            <div className="flex flex-row items-center justify-end gap-[7px] p-5 mb-[10px] mx-[55px]">
+            <div className="flex flex-col md:flex-row items-center justify-end gap-3 p-4 md:p-5 mb-4 mx-auto md:mx-[55px]">
                 {/* Search Bar */}
-                <div className="bg-[#F8F8F8] text-[#1D194C] shadow-[0_1px_2px_0_rgba(0,0,0,0.25)] rounded-[90px] p-[10px] flex flex-row items-center w-[250px] h-[20px]">
-                    <CiSearch className="text-[#1D194C]" />
+                <div className="bg-[#F8F8F8] text-[#1D194C] shadow-md rounded-[90px] p-2 flex items-center w-full max-w-[300px] h-10">
+                    <CiSearch className="text-[#1D194C] text-lg" />
                     <input
                         type="text"
                         placeholder="Search by patient name or serial number"
-                        className="bg-[#F8F8F8] border-none text-[#1D194C] text-[11px] outline-none w-full pl-2"
+                        className="bg-[#F8F8F8] border-none text-[#1D194C] text-xs md:text-sm outline-none w-full pl-2"
                         value={searchTerm}
                         onChange={(e) => setSearchTerm(e.target.value)}
                     />
                 </div>
 
                 {/* Export Button */}
-                <button className="bg-[#F8F8F8] text-[#1D194C] shadow-[0_1px_2px_0_rgba(0,0,0,0.25)] border-none px-4 py-2 rounded-[90px] cursor-pointer ml-3 w-[90px] h-[40px] text-[#707070] flex items-center justify-center gap-1">
+                <button className="bg-[#F8F8F8] text-[#707070] shadow-md border-none px-4 py-2 rounded-[90px] cursor-pointer w-full md:w-[120px] h-10 flex items-center justify-center gap-2 text-sm">
                     Export
-                    <CiExport className="text-[#1D194C]" />
+                    <CiExport className="text-[#1D194C] text-lg" />
                 </button>
             </div>
 
