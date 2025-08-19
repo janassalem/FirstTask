@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { CiSearch, CiExport } from "react-icons/ci";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { IoPersonAddOutline } from "react-icons/io5";
+import "./index.css"
 import PFP from "./assets/PFP.png";
 
 const Users = () => {

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { CiSearch, CiExport } from "react-icons/ci";
 import { BsThreeDotsVertical } from "react-icons/bs";
+import "./index.css"
 import PFP from "./assets/PFP.png";
 
 const Reports = () => {
